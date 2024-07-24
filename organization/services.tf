@@ -58,5 +58,5 @@ resource "aws_organizations_delegated_administrator" "cloudtrail" {
 
 resource "aws_iam_service_linked_role" "cloudtrail" {
   depends_on = [aws_organizations_delegated_administrator.cloudtrail]
-  aws_service_name = "elasticbeanstalk.amazonaws.com"
+  aws_service_name = "cloudtrail.amazonaws.com"
 }
